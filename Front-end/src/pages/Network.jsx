@@ -6,7 +6,9 @@ import dp from "../assets/dp.webp"
 import { TiHome } from "react-icons/ti";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { RxCrossCircled } from "react-icons/rx";
+// import io from "socket.io-client"
 
+// const socket = io("https://linkedin-clone-backend-iogf.onrender.com")
 
 
 

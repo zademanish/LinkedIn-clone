@@ -6,7 +6,7 @@ export const userDataContext = createContext();
 import {io} from "socket.io-client"
 
 
-export let socket = io("http://localhost:8080");
+export let socket = io("https://linkedin-clone-backend-iogf.onrender.com");
 
 
 
