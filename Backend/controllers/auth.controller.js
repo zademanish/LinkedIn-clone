@@ -67,13 +67,13 @@ export const logIn = async(req,res)=>{
         return res.status(400).json({message:"Incorrect Password"});
        }
 
-        let token=await generateToken(user._id)
+        let token= await generateToken(user._id)
 
         res.cookie("token",token,{
             httpOnly:true,
             maxAge:7*24*60*60*1000,
             sameSite:"strict",
-            secure:process.env.NODE_ENVIRONMENT ==="production"
+            secure:process.env.NODE_ENVIRONMENT === "production"
         })
 
         return res.status(200).json(

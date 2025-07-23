@@ -65,7 +65,7 @@ export const search = async(req,res)=>{
     try {
         let {query} = req.query;
         if(!query){
-            return res.statut(400).json({message:"Query is required"})
+            return res.status(400).json({message:"Query is required"})
         }
         let users = await User.find({
             $or:[

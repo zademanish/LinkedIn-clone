@@ -14,7 +14,7 @@ const Nav = () => {
     let [showPopup, setShowPopup] = useState(false);
     let navigate = useNavigate()
     let {serverUrl} = useContext(authDataContext);
-    let [searchInput, setSearchInput] = useState("")
+    let [searchInput, setSearchInput] = useState()
     let [searchData,setSearchData] = useState("")
 
     const handleSignOut = async ()=>{
@@ -57,7 +57,7 @@ const Nav = () => {
             !activeSearch &&  <div><IoSearchSharp onClick={()=>setActiveSearch(true)} className='w-[23px] h-[23px] text-gray-600 lg:hidden'/></div>
         }
 
-        {searchData.length >0 && 
+        {searchData.length > 0 && 
     <div className='absolute h-[500px] overflow-auto top-[90px] left-[0px] lg:left-[20px] w-[100%] lg:w-[700px] bg-white shadow-lg rounded flex flex-col gap-[20px] p-[20px]'>
         {
             searchData.map((sea)=>(
